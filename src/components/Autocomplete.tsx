@@ -47,6 +47,9 @@ const Autocomplete = <T extends Option>({
       setFilteredOptions(filtered);
       setIsOpen(filtered.length > 0);
       setHighlightedIndex(-1); // Reset the highlighted index after highlighted index after filtering
+
+      // reset the typing state once filtering is done
+      setIsTyping(false);
     }, 500);
 
     return () => {
